@@ -2,4 +2,4 @@
 
 ## Licence
 
-This work is licenced under a CC-NC-SA licence.
+This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
