@@ -2,7 +2,7 @@
 
 This project aims to optimize rainfall travel routes, primarily targeting transportation authorities. It was developed as part of the challenge proposed by CEMADEN (National Center for Monitoring and Early Warning of Natural Disasters) in Brazil. The challenge focuses on dynamic routing policies that prioritize people's safety in their vehicles, considering high-resolution and real-time rainfall forecasts. The project utilizes techniques such as Nowcasting to provide accurate and frequently updated rainfall predictions. By incorporating information about rainfall into route planning, the system seeks to offer more reliable and efficient routes, reducing exposure to heavy rains and potential flooding. The project provides classes and functions to facilitate rainfall-aware route optimization, using precipitation estimates and street shapefile data.
 
-This work was developed by [Gabriel Delgado](https://github.com/Delg11) and [Tiago Macedo](https://github.com/tiagormacedo), supervised by [Prof. Leonardo Souza](https://www.researchgate.net/profile/Leonardo-Santos-2), [Prof. Luiz Leduíno Neto](https://sites.google.com/view/leduino/) and [Prof. Horácio Yanasse](https://br.linkedin.com/in/horacio-yanasse-39289794?original_referer=https%3A%2F%2Fduckduckgo.com%2F).
+This work was developed by [Gabriel Delgado](https://github.com/Delg11) and [Tiago Macedo](https://github.com/tiagormacedo), supervised by [Prof. Leonardo Souza](https://www.researchgate.net/profile/Leonardo-Santos-2) (CEMADEN), [Prof. Luiz Leduíno Neto](https://sites.google.com/view/leduino/) (Unifesp) and [Prof. Horácio Yanasse](https://br.linkedin.com/in/horacio-yanasse-39289794?original_referer=https%3A%2F%2Fduckduckgo.com%2F) (Unifesp).
 
 ## Example
 
