@@ -6,6 +6,6 @@ This work was developed by [Gabriel Delgado](https://github.com/Delg11) and [Tia
 
 ## License
 
-This project is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike license.
+This project is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike license](https://raw.githubusercontent.com/RPvMM-2023-S1/Rain-and-flood-informed-vehicle-routing-problem/main/LICENCE).
 
 We appreciate your interest in our project and look forward to hearing all of your suggestions! If you have any questions, please feel free to reach out to us.
