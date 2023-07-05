@@ -11,7 +11,6 @@ The file that contains the main `Python` code is `rainfall_routing.py`.  The req
 We also created a Notebook version of the main `Python` code, `rainfall_routing.ipynb`.  This notebook contains further details, comments and an example.  For convenience, we reproduce this example below.
 
 To run the `Python` code, we have to fix the boundary coordinates of the region that we want to study and the grid spacing of the radar:
-
 ```python
 lat0 = -23.7748
 latoo = -23.2959
@@ -22,28 +21,24 @@ dlon = 0.009957
 ```
 
 In the example above, we chose a region within the metropolitan area of Sao Paulo and the grid spacing given by Radar Sao Roque.  Using this information, we can instantiate a `Grafo` class and a `Radar` class:
-
 ```python
 sao_paulo = Grafo(lat0, latoo, lon0, lonoo)
 sao_roque = Radar(lat0, lon0, dlat, dlon)
 ```
 
 Next, we have to choose the origin, destination and initial time of a route:
-
 ```python
 origin = (-23.536718, -46.589832)
 destination = (-23.531962, -46.653599)
-agora = Agora(2019, 1, 4, 15, 0)
+agora = Agora(2019, 1, 4, 16, 40)
 ```
 
-In the example above, the origin and destination are two points in downtown Sao Paulo, and the initial time is 3pm on January 4th, 2019.  Using this information, we can instantiate an `Experiment` class:
-
+In the example above, the origin and destination are two points in downtown Sao Paulo, and the initial time is 4:40 pm on January 4th, 2019.  Using this information, we can instantiate an `Experiment` class:
 ```python
 example = Experiment(origin, destination, agora, sao_paulo, sao_roque)
 ```
 
 To finish the setup, we only need to define a weight function that our experiment will minimize.  Here are a few weight functions that can be used:
-
 ```python
 # Only minimize the duration of the route
 def time_no_rain (graph, edge, flooded_points, rains):
@@ -62,7 +57,6 @@ def proposed (graph, edge, flooded_points, rains):
 ```
 
 Now that we have all these ingredients, we can run an `experiment` and its `analysis`:
-
 ```python
 for f in [time_no_rain, length_no_rain, proposed]:
 
@@ -78,11 +72,11 @@ The output will be a message containing information about the total duration, to
 time_no_rain
 The total distance traveled was 7.827 km.
 The travel time was 10 minutes and 30 seconds.
-The rainfall along the path was: 0.000 mm.
+The rainfall along the path was: 44.200 mm.
 length_no_rain
 The total distance traveled was 7.724 km.
 The travel time was 11 minutes and 7 seconds.
-The rainfall along the path was: 0.000 mm.
+The rainfall along the path was: 15.700 mm.
 proposed
 The total distance traveled was 8.039 km.
 The travel time was 10 minutes and 52 seconds.
@@ -91,8 +85,8 @@ The rainfall along the path was: 0.000 mm.
 
 One can see the difference between the routes obtained in this specific example below:
 ![image](https://github-production-user-asset-6210df.s3.amazonaws.com/130193931/251002177-5af01116-dee2-4c9a-9347-d09507831bfd.png)
-🟦  Optimizing time without considering rain;
-🟩  Optimizing distance without considering rain;
+🟦  Optimizing time without considering rain\
+🟩  Optimizing distance without considering rain\
 🟥  Optimizing time considering rain
 
 
@@ -100,10 +94,10 @@ One can see the difference between the routes obtained in this specific example 
 ## Future work
 
 **Adapt the weight function to different vehicle types.**
-The functions that we chose as weight functions are deformations of the travel times by a linear factor given by the amount of rain that is predicted for each edge (see function `proposed` in `rainfall_routing.ipynb`).  This fucntion does not differentiate between different types of vehicles, such as motorcycles, cars and trucks.  In order to improve the proposed model, one could acknowledge the vehicle type and adapt the weight functions accordingly.
+The functions that we chose as weight functions are deformations of the travel times by a linear factor given by the amount of rain that is predicted for each edge (see function `proposed` in `rainfall_routing.ipynb`).  This function does not differentiate between different types of vehicles, such as motorcycles, cars and trucks.  In order to improve the proposed model, one could acknowledge the vehicle type and adapt the weight function accordingly.
 
 **Incorporate traffic data.**
-Another aspect that our `proposed` weight function does not presently consider is real-time traffic conditions for estimating travel times. Incorporating data on traffic flow would significantly improve the accuracy of the model in avoiding rain and floods.
+Another aspect that our `proposed` weight function does not presently consider is real-time traffic conditions for estimating travel times. Incorporating data on traffic flow would significantly improve the accuracy of the model in avoiding rain and flood.
 
 **Prediction of floods.**
 For the practical deployment of this model, the ability to predict flooding events is crucial. The `proposed` weight function relies on historical flooding data. However, to effectively utilize this method in the future, it is necessary to predict flooding events in advance. A possible enhancement could involve integrating hydraulic models with a machine learning approach that utilizes recent rainfall data along with historical flooding information for training purposes.
