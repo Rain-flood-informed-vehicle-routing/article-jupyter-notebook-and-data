@@ -59,6 +59,7 @@ def proposed (graph, edge, flooded_points, rains):
 Now that we have all these ingredients, we can run an `experiment` and its `analysis`:
 ```python
 for f in [time_no_rain, length_no_rain, proposed]:
+    print(f.__name__)
 
     # Run the experiment
     edges_rains = example.experiment(f)
