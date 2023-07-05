@@ -88,7 +88,7 @@ One can see the difference between the routes obtained in this specific example 
 ![image](https://github-production-user-asset-6210df.s3.amazonaws.com/130193931/251002177-5af01116-dee2-4c9a-9347-d09507831bfd.png)
 🟦  Optimizing time without considering rain\
 🟩  Optimizing distance without considering rain\
-🟥  Optimizing time considering rain
+🟥  Optimizing time considering rain and flood
 
 
 
