@@ -4,6 +4,7 @@ In this project, we present a method for obtaining routes that avoid rain and fl
 
 This work was developed by [Gabriel Delgado](https://github.com/Delg11) and [Tiago Macedo](https://github.com/tiagormacedo) as part of the 2023 Fall semester class [_Resolução de Problemas via Modelagem Matemática_ (Resolution of problems via mathematical modeling)](http://sites.google.com/view/model-matematica) at [Unifesp](https://www.unifesp.br/campus/sjc/).  It was supervised by [Prof. Leonardo Souza](https://www.researchgate.net/profile/Leonardo-Santos-2) (CEMADEN), [Prof. Luiz Leduíno Neto](https://sites.google.com/view/leduino/) (Unifesp) and [Prof. Horácio Yanasse](https://br.linkedin.com/in/horacio-yanasse-39289794?original_referer=https%3A%2F%2Fduckduckgo.com%2F) (Unifesp).
 
+
 ## Files
 
 The file that contains the main `Python` code is `rainfall_routing.py`.  The requirements for running `rainfall_routing.py` are contained in the file `requirements.txt`, and the precipitation data that we used to validate our results are contained in the folder `radar_data`.
@@ -91,7 +92,6 @@ One can see the difference between the routes obtained in this specific example 
 🟥  Optimizing time considering rain and flood
 
 
-
 ## Future work
 
 **Adapt the weight function to different vehicle types.**
@@ -104,11 +104,13 @@ Another aspect that our `proposed` weight function does not presently consider i
 For the practical deployment of this model, the ability to predict flooding events is crucial. The `proposed` weight function relies on historical flooding data. However, to effectively utilize this method in the future, it is necessary to predict flooding events in advance. A possible enhancement could involve integrating hydraulic models with a machine learning approach that utilizes recent rainfall data along with historical flooding information for training purposes.
 
 
-### Bug Reports and Feature Requests
-
-If you encounter any bugs or have ideas for new features, please submit them through our GitHub issue tracker.
 ## License
 
 This project is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike license](https://raw.githubusercontent.com/RPvMM-2023-S1/Rain-and-flood-informed-vehicle-routing-problem/main/LICENCE).
+
+
+### Bug Reports and Feature Requests
+
+If you encounter any bugs or have ideas for new features, please submit them through our GitHub issue tracker.
 
 We appreciate your interest in our project and look forward to hearing all of your suggestions! If you have any questions, please feel free to reach out to us.
